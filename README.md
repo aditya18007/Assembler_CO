@@ -28,13 +28,7 @@ Make two-pass assembler for the 12 bit accumulator architecture
 --------------
 |Token |What |Usage|
 |-----|-----|-----|
-| `Label` |Any Valid Variable name |Used to mark an instruction as well as Data.Instruction may or may not contain Label. **Compulsary** to mark an instruction when using `Branching` Operation. **ALSO , when declaring a variable `Label` should clearly be `DATA`**. For example `>>`   
-DATA : int x , 10 ; //x is defined an assigned value 10.   
-`>>`   
-DATA : int y ; //Variable is declared. **Must be assigned value , else throw error**   
-`>>`   
-DATA : y , 10 ;//Variable assigned value. **Throw error if y is declared before**    
-| 
+| `Label` |Any Valid Variable name |Used to mark an instruction as well as Data.Instruction may or may not contain Label. **Compulsary** to mark an instruction when using `Branching` Operation. **ALSO , when declaring a variable `Label` should clearly be `DATA` OR when assigning value to a variable , `Label` must be DATA**.| 
 |`:` | To be used after *Label*. **To be used even if there is no `Label`**| Tells the assembler about end of label. **Every Instruction must use :** *Throws an error otherwise* |
 |`Opcode` | The string representing instruction.|**Must be from the list given below.** If not , throw an error|
 |`Operands` | Operands to be used with Opcode. | **Must be defined in this procedure** , **Variable name should be valid** , **Number of operands must be equal to those demanded by Opcode** |
