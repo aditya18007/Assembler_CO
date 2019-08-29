@@ -21,15 +21,15 @@ Make two-pass assembler for the 12 bit accumulator architecture
 Assemble Opcode | Possible Errors|
 |--------------|------------------|
 |`CLA` || 
-|`LAC` &`x` | **Value in address not defined**|
-|`SAC` &`x` | **Value in address not defined**|
-|`ADD` &`x` | **Value in address not defined**|
-|`SUB` &`x` | **Value in address not defined**|
-|`BRZ` &`x` | **Value in address not defined**|
-|`BRN` &`x` | **Value in address not defined**|
-|`BRP` &`x` | **Value in address not defined**|
-|`INP` &`x` | **Value in address not defined**|
-|`DSP` &`x` | **Value in address not defined**|
-|`MUL` &`x` | **Value in address not defined**|
+|`LAC` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`SAC` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`ADD` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`SUB` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`BRZ` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`BRN` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`BRP` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`INP` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`DSP` &`x` | **Value in address not defined** , **Address out of bounds exception**|
+|`MUL` &`x` | **Value in address not defined** , **Address out of bounds exception**|
 |`DIV` &`x` | **Value in address not defined** , **Zero division error**|
 |`STP`||
