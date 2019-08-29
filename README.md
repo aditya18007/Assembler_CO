@@ -86,21 +86,21 @@ Assemble Opcode | Possible Errors|
 |`STP`|*If anything after* `STP` , **Not reachable Code**|
     
     
-# Errors 
-     
-**(1) typeMismatchError :**          
+# Errors Defined
+<pre>     
+(1) typeMismatchError :          
         (i) `DATA` expected and `ADDRESS` passed and ice-versa.                
         (ii) In `ADD`,`MUL`,`SUB`,`DIV` Type of opperand different from accumulator type.         
         (iii) Variable defied type `A` and found to be type `B`.         
         
-**(2) variableError :**         
+(2) variableError :         
         (i) Variable name invalid.     
         (ii) Variable not defined.     
               (a) `ADDRESS` not defined,     
               (b) `DATA` not defined,     
         (iii) Value not assigned.      
 
-**(3) syntaxError :**     
+(3) syntaxError :     
         (i)`:` missing.     
         (ii) `;` missing.     
         (iii) Opcode invalid.    
@@ -108,5 +108,6 @@ Assemble Opcode | Possible Errors|
         (v) Multiline comment :   
             (a) Not starting , but ending.     
             (b) Not ending but start found.
-**(4) mathEror :**
-(&nbsp)        (i)zeroDivisionError
+            
+(4) mathEror :       
+    (i)zeroDivisionError       
