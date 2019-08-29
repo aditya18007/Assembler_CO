@@ -112,4 +112,4 @@ Assemble Opcode | Possible Errors|
 (4) mathEror :       
     (i)zeroDivisionError
 
-(5) accumulatorContentsNotSetError : Thrown when during program , accumulator is not cleared or No data is loaded. But an operation is done using 									   contents of accumulator.      
+(5) accumulatorContentsNotSetError : Thrown when during program , accumulator is not cleared or No data is loaded. But an operation is done using contents of accumulator.      
