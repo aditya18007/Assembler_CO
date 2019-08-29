@@ -82,7 +82,7 @@ Assemble Opcode | Possible Errors|
 |`INP` `x` |   **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
 |`DSP` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
 |`MUL` `x` | **Value not defined** ,**Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`DIV` `x` , `R1` , `R2`  | **Variable not defined** , **Zero division error** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
+|`DIV` `x` , `R1` , `R2`  | **Variable not defined , Zero division error , Variable Type : `DATA` expected  , Value not assigned to variable**|
 |`STP`|*If anything after* `STP` , **Not reachable Code**|
     
     
@@ -101,10 +101,12 @@ Assemble Opcode | Possible Errors|
         (iii) Value not assigned.      
 
 **(3) syntaxError :**     
-        (i)`:` missing.     
-        (ii) `;` missing.     
-        (iii) Opcode invalid.    
-        (iv) Possible variable defination , but not labelled `DATA`     
-        (v) Multiline comment :    
-                (a) Not starting , but ending.     
-                (b) Not ending but start found.
+        &nbsp(i)`:` missing.     
+        &nbsp(ii) `;` missing.     
+        &nbsp(iii) Opcode invalid.    
+        &nbsp(iv) Possible variable defination , but not labelled `DATA`     
+        &nbsp(v) Multiline comment :    
+      &nbsp,&nbsp          (a) Not starting , but ending.     
+&nbsp,&nbsp                (b) Not ending but start found.
+**(4) mathEror :**
+&nbsp      (i)zeroDivisionError
