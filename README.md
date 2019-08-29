@@ -2,7 +2,7 @@
 Make two-pass assembler for the 12 bit accumulator architecture
 --------------------------------------
 |Opcode | Assembly Opcode   |Meaning |
---------------------------------------
+|-------|--------------------|------------------|
 |0000   |     CLA            | Clear accumulator |
 |0001   |     LAC            | Load into accumulator from address|
 |0010   |     SAC            | Store accumulator contents into address|
