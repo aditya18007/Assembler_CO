@@ -105,8 +105,8 @@ Assemble Opcode | Possible Errors|
         &nbsp(ii) `;` missing.     
         &nbsp(iii) Opcode invalid.    
         &nbsp(iv) Possible variable defination , but not labelled `DATA`     
-        &nbsp(v) Multiline comment :    
-      &nbsp,&nbsp          (a) Not starting , but ending.     
-&nbsp,&nbsp                (b) Not ending but start found.
+        &nbsp(v) Multiline comment :   
+        (a) Not starting , but ending.     
+&nbsp ; &nbsp;                (b) Not ending but start found.
 **(4) mathEror :**
-&nbsp      (i)zeroDivisionError
+&nbsp ;(i)zeroDivisionError
