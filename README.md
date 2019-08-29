@@ -15,7 +15,7 @@
 |`Operands` | Operands to be used with Opcode. | **Must be defined in this procedure** , **Variable name should be valid** , **Number of operands must be equal to those demanded by Opcode** |
 |`;` | End of Instruction | **Compulsary to use in every instruction. if `:` is reached directly after `;` Or file ends and `;` is not present , then throw error.**|
 |`\\` | Single line comments | Everything after `;` is ignored **as long as it is in same line**|
-|`/*`  *Comments*  `*/` | Multi-line comments | Everything in between `/\*` and  `\*/` is ignored. **Throw error if either of two is missing**|  
+|`/*`  *Comments*  `*/` | Multi-line comments | Everything in between `/*` and  `*/` is ignored. **Throw error if either of two is missing**|  
 
 
 # Labels   
