@@ -1,0 +1,5 @@
+package assembler;
+
+class Input {
+
+}

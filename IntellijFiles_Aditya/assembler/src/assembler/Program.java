@@ -1,0 +1,4 @@
+package assembler;
+
+class Program {
+}
