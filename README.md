@@ -73,16 +73,16 @@ Assemble Opcode | Possible Errors|
 |--------------|------------------|
 |`CLA` |-| 
 |`LAC` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`SAC` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`ADD` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`SUB` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`BRZ` `ADDRESS` | **Variable not defined** , **Variable Type : `ADDRESS` expected **|
+|`SAC` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**, **Accumulator Contents Not Set**|
+|`ADD` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**, **Accumulator Contents Not Set**|
+|`SUB` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**, **Accumulator Contents Not Set**|
+|`BRZ` `ADDRESS` | **Variable not defined** , **Variable Type : `ADDRESS` expected ** |
 |`BRN` `ADDRESS` | **Variable not defined** , **Variable Type : `ADDRESS` expected **|
 |`BRP` `ADDRESS` | **Variable not defined** , **Variable Type : `ADDRESS` expected **|
 |`INP` `x` |   **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
 |`DSP` `x` | **Variable not defined** , **Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`MUL` `x` | **Value not defined** ,**Variable Type : `DATA` expected ** , **Value not assigned to variable**|
-|`DIV` `x` , `R1` , `R2`  | **Variable not defined , Zero division error , Variable Type : `DATA` expected  , Value not assigned to variable**|
+|`MUL` `x` | **Value not defined** ,**Variable Type : `DATA` expected ** , **Value not assigned to variable** , , **Accumulator Contents Not Set**|
+|`DIV` `x` , `R1` , `R2`  | **Variable not defined , Zero division error , Variable Type : `DATA` expected  , Value not assigned to variable** , **Accumulator Contents Not Set**|
 |`STP`|*If anything after* `STP` , **Not reachable Code**|
     
     
@@ -101,7 +101,7 @@ Assemble Opcode | Possible Errors|
         (iii) Value not assigned.      
 
 (3) syntaxError :     
-        (i)`:` missing.     
+        (i)`:` missing.      
         (ii) `;` missing.     
         (iii) Opcode invalid.    
         (iv) Possible variable defination , but not labelled `DATA`     
@@ -110,4 +110,6 @@ Assemble Opcode | Possible Errors|
             (b) Not ending but start found.
             
 (4) mathEror :       
-    (i)zeroDivisionError       
+    (i)zeroDivisionError
+
+(5) accumulatorContentsNotSetError : Thrown when during program , accumulator is not cleared or No data is loaded. But an operation is done using 									   contents of accumulator.      
