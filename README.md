@@ -6,7 +6,7 @@ Make two-pass assembler for the 12 bit accumulator architecture
 |`0000`   |     `CLA`            | - |*Clear* accumulator |
 |`0001`   |     `LAC`            | &`x` |*Load* into accumulator **from address**|
 |`0010`   |     `SAC`            | &`x` |*Store* accumulator contents **into address**|
-|`0011`   |     `ADD`            | &`x` |*Add* **address** contents to accumulator contents|
+|`0011`   |     `ADD`            | &`x` |*Add* **address contents** to accumulator contents|
 |`0100`   |     `SUB`            | &`x` |*Subtract* **address contents** from accumulator contents|
 |`0101`   |     `BRZ`            | &`x` |Branch **to address** if *accumulator contains **zero***|
 |`0110`   |     `BRN`            | &`x` |Branch **to address** if *accumulator contains **negative** value*|
@@ -21,15 +21,15 @@ Make two-pass assembler for the 12 bit accumulator architecture
 Assemble Opcode | Possible Errors|
 |--------------|------------------|
 |`CLA` || 
-|`LAC` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`SAC` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`ADD` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`SUB` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`BRZ` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`BRN` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`BRP` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`INP` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`DSP` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`MUL` &`x` | **Value in address not defined** , **Address out of bounds exception**|
-|`DIV` &`x` | **Value in address not defined** , **Zero division error**|
+|`LAC` \*`x` | **Value in address not defined** , **Value expected**|
+|`SAC` \*`x` | **Value in address not defined** , **Value expected**|
+|`ADD` \*`x` | **Value in address not defined** , **Value expected**|
+|`SUB` \*`x` | **Value in address not defined** , **Value expected**|
+|`BRZ` &`x` | **Value in address not defined** , **Address expected**|
+|`BRN` &`x` | **Value in address not defined** , **Address expected**|
+|`BRP` &`x` | **Value in address not defined** , **Address expected**|
+|`INP` &`x` | **Value in address not defined** , **Address expected**|
+|`DSP` &`x` | **Value in address not defined** , **Address expected**|
+|`MUL` \*`x` | **Value in address not defined** , **Value expected**|
+|`DIV` \*`x` | **Value in address not defined** , **Zero division error** , **Value Expected**|
 |`STP`||
