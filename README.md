@@ -1,7 +1,25 @@
 # Assembler
-Make two-pass assembler for the 12 bit accumulator architecture
+Make two-pass assembler for the 12 bit accumulator architecture  
 **General Format of an instruction**  
-`Label` **:** `Opcode` *operands* **;** *Comments* 
+
+`/\*`  
+*Comments*  
+`\*/`  
+
+`Label` **:** `Opcode` *operands* **;** `//`*Comments*  
+  
+--------------
+|Token |What |Usage|
+|-----|-----|-----|
+| `Label` |Any Valid Variable name |Used to mark an instruction.Instruction may or may not contain Label.**Compulsary** to mark an instruction when using `Branching` Operation.| 
+|`:` | To be used after *Label*. **To be used even if there is no `Label`**| Tells the assembler about end of label. **Every Instruction must use :** *Throws an error otherwise* |
+|`Opcode` | The string representing instruction.|**Must be from the list given below.** If not , throw an error|
+|`Operands` | Operands to be used with Opcode. | **Must be defined in this procedure** , **Variable name should be valid** , **Number of operands must be equal to those demanded by Opcode** |
+|`;` | End of Instruction | **Compulsary to use in every instruction. if `:` is reached directly after `;` Or file ends and `;` is not present , then throw error.**|
+|`\\` | Single line comments | Everything after `;` is ignored **as long as it is in same line**|
+|`/\*`  *Comments*  `\*/` | Multi-line comments | Everything in between `/\*` and  `\*/` is ignored. **Throw error if either of two is missing|  
+
+
 --------------------------------------
 |Opcode | Assembly Opcode   | Parameters |Meaning |
 |-------|--------------------|-----------|------------------|
