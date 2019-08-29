@@ -1,6 +1,6 @@
 # Assembler
 Make two-pass assembler for the 12 bit accumulator architecture
-**General Format of an instruction**
+**General Format of an instruction**  
 `Label` **:** `Opcode` *operands* **;** *Comments* 
 --------------------------------------
 |Opcode | Assembly Opcode   | Parameters |Meaning |
